@@ -17,13 +17,13 @@ angular.module('SatanApp', [
          */
         var homeState = {
             name: 'home',
-            url: '/home',
+            url: '/home/',
             templateUrl: 'home/home.html'
         };
 
         var aboutState = {
             name: 'about',
-            url: '/about',
+            url: '/about/',
             templateUrl: 'about/about.html'
         };
 
@@ -33,10 +33,10 @@ angular.module('SatanApp', [
         $stateProvider.state(homeState);
         $stateProvider.state(aboutState);
 
-        $urlRouterProvider.otherwise(function ($injector) {
+        /*$urlRouterProvider.otherwise(function ($injector) {
             var $state = $injector.get('$state');
             $state.go('home');
-        });
+        });*/
 
         /**
          * Hell mode
