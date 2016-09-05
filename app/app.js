@@ -4,8 +4,7 @@
 angular.module('myApp', [
     'ui.router',
     'myApp.view1',
-    'myApp.view2',
-    'myApp.version'
+    'myApp.view2'
 ]).config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
     function ($locationProvider, $stateProvider, $urlRouterProvider) {
 
