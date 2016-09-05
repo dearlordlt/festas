@@ -1,31 +1,47 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('SatanApp', [
+
+    //External satan stuff
     'ui.router',
-    'myApp.view1',
-    'myApp.view2'
+
+    //Internal satan stuff
+    'SatanApp.home',
+    'SatanApp.about'
+
 ]).config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
     function ($locationProvider, $stateProvider, $urlRouterProvider) {
 
-        $locationProvider.html5Mode(true);
-
-        $urlRouterProvider.otherwise('/view1');
-
-        var helloState = {
-            name: 'view1',
-            url: '/view1',
-            templateUrl: 'view1/view1.html'
+        /**
+         * States of Hell
+         */
+        var homeState = {
+            name: 'home',
+            url: '/home',
+            templateUrl: 'home/home.html'
         };
 
         var aboutState = {
-            name: 'view2',
-            url: '/view2',
-            templateUrl: 'view2/view2.html'
+            name: 'about',
+            url: '/about',
+            templateUrl: 'about/about.html'
         };
 
-        $stateProvider.state(helloState);
+        /**
+         * Sate Provider from Hell
+         */
+        $stateProvider.state(homeState);
         $stateProvider.state(aboutState);
+
+        $urlRouterProvider.otherwise(function ($injector) {
+            var $state = $injector.get('$state');
+            $state.go('home');
+        });
+
+        /**
+         * Hell mode
+         */
+        $locationProvider.html5Mode({enabled: true, requireBase: false});
 
     }])
 ;

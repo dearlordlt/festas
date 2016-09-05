@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="myApp" class="no-js">
+<html lang="en" ng-app="SatanApp" class="no-js">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>A K A D E M O N A I</title>
@@ -16,14 +17,13 @@
     <!-- endbower -->
     <link rel="stylesheet" href="app.css">
 
-
 </head>
 
 <body>
 
 <ul class="menu">
-    <li><a ui-sref="view1">view1</a></li>
-    <li><a ui-sref="view2">view2</a></li>
+    <li><a ui-sref="home">home</a></li>
+    <li><a ui-sref="about">about</a></li>
 </ul>
 
 <ui-view></ui-view>
@@ -38,8 +38,8 @@
 <!-- endbower -->
 
 <script src="app.js"></script>
-<script src="view1/view1.js"></script>
-<script src="view2/view2.js"></script>
+<script src="home/home.js"></script>
+<script src="about/about.js"></script>
 
 </body>
 </html>
