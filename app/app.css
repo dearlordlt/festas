@@ -1,15 +1,11 @@
 /* app css stylesheet */
 
-h1 {
-  font-family: 'Creepster', cursive;
-  color: red;
+.jumbotron h1, .jumbotron h2, .jumbotron h3{
+    font-family: 'Nosifer', cursive;
+    color: red;
 }
 
 /* Bootstrap rewrites */
 .navbar {
-
-}
-
-.ad-header {
 
 }
