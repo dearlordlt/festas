@@ -6,8 +6,9 @@ angular.module('SatanApp', [
     'ui.router',
 
     //Internal satan stuff
-    'SatanApp.home',
-    'SatanApp.about'
+    'SatanApp.okultas',
+    'SatanApp.sventove',
+    'SatanApp.main'
 
 ]).config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
     function ($locationProvider, $stateProvider, $urlRouterProvider) {
@@ -15,23 +16,23 @@ angular.module('SatanApp', [
         /**
          * States of Hell
          */
-        var homeState = {
-            name: 'home',
-            url: '/home/',
-            templateUrl: 'home/home.html'
+        var okultasState = {
+            name: 'okultas',
+            url: '/',
+            templateUrl: 'akademonai/ad.okultas/okultas.html'
         };
 
-        var aboutState = {
-            name: 'about',
-            url: '/about/',
-            templateUrl: 'about/about.html'
+        var sventoveState = {
+            name: 'sventove',
+            url: '/sventove/',
+            templateUrl: 'akademonai/ad.sventove/sventove.html'
         };
 
         /**
          * Sate Provider from Hell
          */
-        $stateProvider.state(homeState);
-        $stateProvider.state(aboutState);
+        $stateProvider.state(okultasState);
+        $stateProvider.state(sventoveState);
 
         /*$urlRouterProvider.otherwise(function ($injector) {
             var $state = $injector.get('$state');

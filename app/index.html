@@ -19,20 +19,44 @@
     <!-- SATAN FONTs -->
     <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
 
+    <!-- SATAN CSS -->
     <link rel="stylesheet" href="app.css">
 
 </head>
 
 <body>
 
-<h1>A K A D E M O N A I - 2016</h1>
+<header ng-controller="MenuController">
+    <div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
-<ul class="menu">
-    <li><a ui-sref="home">home</a></li>
-    <li><a ui-sref="about">about</a></li>
-</ul>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{active: $state.includes('okultas')}"><a ui-sref="okultas">Okultas</a></li>
+                        <li ng-class="{active: $state.includes('sventove')}"><a ui-sref="sventove">Sventovė</a></li>
+                        <li ng-class=""><a disabled="true">Apeigos</a></li>
+                        <li ng-class=""><a disabled="true">Paktas</a></li>
+                        <li ng-class=""><a disabled="true">Pateptieji</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
 
-<ui-view></ui-view>
+<div class="container">
+    <ui-view></ui-view>
+</div>
 
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
@@ -44,8 +68,9 @@
 <!-- endbower -->
 
 <script src="app.js"></script>
-<script src="home/home.js"></script>
-<script src="about/about.js"></script>
+<script src="akademonai/ad.okultas/okultas.js"></script>
+<script src="akademonai/ad.sventove/sventove.js"></script>
+<script src="akademonai/MenuController.js"></script>
 
 </body>
 </html>
