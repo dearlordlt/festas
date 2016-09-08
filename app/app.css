@@ -11,6 +11,11 @@
     color: #ffffff;
 }
 
+header {
+    background-color: black;
+    position: relative;
+}
+
 /* Bootstrap rewrites */
 .navbar {
 
