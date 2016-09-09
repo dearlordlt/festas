@@ -1,6 +1,6 @@
 /* app css stylesheet */
 
-.jumbotron h1, .jumbotron h2, .jumbotron h3{
+.jumbotron h1, .jumbotron h2, .jumbotron h3, .jumbotron h4{
     font-family: 'Playfair Display SC', serif;
     color: red;
 }
@@ -16,6 +16,11 @@ header {
     position: relative;
 }
 
+.ad-paragraph {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #cecece;
+}
 /* Bootstrap rewrites */
 .navbar {
 
