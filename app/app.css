@@ -2,7 +2,9 @@
 
 .jumbotron h1, .jumbotron h2, .jumbotron h3, .jumbotron h4{
     font-family: 'Playfair Display SC', serif;
-    color: red;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: darkred;
 }
 
 .ad-tekstas {
@@ -21,6 +23,24 @@ header {
     margin-bottom: 10px;
     color: #cecece;
 }
+
+.ad-subtitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #909090;
+    font-size: 14px !important;
+    font-style: italic;
+    /*text-align: center;*/
+}
+
+a {
+    color: darkred;
+}
+
+a:hover {
+    color: red;
+}
+
 /* Bootstrap rewrites */
 .navbar {
 
