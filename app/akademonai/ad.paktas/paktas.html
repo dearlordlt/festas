@@ -30,7 +30,7 @@
 				</div>
 				
 				<div class="form-group">
-					<div class="col-md-3 control-label" style="margin-top: 37px;">Lytis *</div>
+					<div class="col-md-3 control-label ad-radio">Lytis *</div>
 					<div class="radio col-md-9">
 						
 						<div class="col-md-12">
@@ -63,11 +63,13 @@
 					</div>
 					
 					<div class="col-md-3">
-						<button class="btn btn-danger">Gauti Titulą</button>
+						<button class="btn btn-danger" ng-click="gautiTitula()">Gauti Titulą</button>
 					</div>
 				</div>
 			</form>
-			<form class="form-horizontal">
+			
+			
+			<form class="form-horizontal" ng-if="paktas.titulas">
 				<div class="form-group">
 					<label class="col-md-5 control-label">Atvykstu</label>
 					<div class="col-md-7">
@@ -114,9 +116,9 @@
 				
 				<div class="form-group">
 					<div>Aš, [titulas vardas], laisva valia ir visuomenei nepritariant sudarau šį paktą su tamsos princu ir savo kaulų čiulpais prisiekiu atvykti į apeigas.</div>
-					<div class="checkbox" style="text-align: center;">
+					<div class="checkbox ad-submit-text">
 						<label>
-							<input type="checkbox" value="">
+							<input type="checkbox">
 							Satan
 						</label>
 					</div>

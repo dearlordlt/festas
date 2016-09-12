@@ -41,6 +41,14 @@ a:hover {
     color: red;
 }
 
+.ad-submit-text {
+    text-align: center;
+}
+
+.ad-radio {
+    margin-top: 37px;
+}
+
 /* Bootstrap rewrites */
 .navbar {
 

@@ -16,6 +16,14 @@ angular.module('SatanApp.paktas', [])
 			pasiulymas: ''
 		};
 		
+		$scope.gautiTitula = function () {
+			$scope.paktas.titulas = 'asdasd';
+		};
+		
+		
+		
+		
+		
 		$scope.registerAcademon = function () {
 			
 			var academon = {
