@@ -20,9 +20,9 @@ angular.module('SatanApp.paktas', [])
 			$scope.paktas.titulas = 'asdasd';
 		};
 		
-		
-		
-		
+		console.log(paktasVardaiFactory.getTitle('istvirkelis', 'Pranas'));
+		console.log(paktasVardaiFactory.getTitle('istvirkele', 'Gertrūda'));
+		console.log(paktasVardaiFactory.getTitle('abominacija', 'Leonidas'));
 		
 		$scope.registerAcademon = function () {
 			

@@ -28,7 +28,7 @@ angular.module('SatanApp.paktas')
 
             if(type === 'istvirkelis' || type === 'istvirkele') {
                 //universal first
-                title == name + ' ' + universal2W1st[Math.floor(Math.random() * universal2W1st.length)];
+                title = name + ' ' + universal2W1st[Math.floor(Math.random() * universal2W1st.length)];
 
                 if(type === 'istvirkelis') {
                     title += ' ' + istvirkelis2Wnd[Math.floor(Math.random() * istvirkelis2Wnd.length)];
