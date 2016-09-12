@@ -1,11 +1,7 @@
-RewriteEngine on
-
-RewriteBase / #change this!
-
-# Don't rewrite files or directories
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-
-# Rewrite everything else to index.html to allow html5 state links
-RewriteRule ^ index.html [L]
+Options +FollowSymlinks
+    RewriteEngine On
+    RewriteBase /~yourusername/appname/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !.*\.(css|js|html|png|jpg|jpeg|gif|txt)
+    RewriteRule (.*) index.html [L]
