@@ -1,7 +1,9 @@
-Options +FollowSymlinks
+Options +FollowSymLinks
+
+<ifModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /~yourusername/appname/public/
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} !.*\.(css|js|html|png|jpg|jpeg|gif|txt)
+    RewriteCond %{REQUEST_URI} !index
     RewriteRule (.*) index.html [L]
+</ifModule>
