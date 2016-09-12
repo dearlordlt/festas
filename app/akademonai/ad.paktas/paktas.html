@@ -5,7 +5,7 @@
 	<!-- Turinys -->
 	<div class="col-md-7">
 		
-		<div class="jumbotron">
+		<div class="jumbotron" ng-show="!registered">
 			<h4>Paktas</h4>
 			<form class="form-horizontal">
 				<div class="form-group">
@@ -62,7 +62,7 @@
 						<div class="input-group">
 							<div class="form-control" id="paktasTitulas" ng-model="paktas.titulas"  style="height: 60px;">{{paktas.titulas}}</div>
 							<span class="input-group-btn">
-				        <button class="btn btn-danger" ng-click="gautiTitula()" type="button" style="height: 60px;">Gauti Titulą</button>
+				        <button class="btn btn-danger" ng-click="gautiTitula()" type="button" style="height: 60px;" ng-disabled="!validateTitulas()">Gauti Titulą</button>
 				      </span>
 						</div><!-- /input-group -->
 					</div>
@@ -70,7 +70,7 @@
 			</form>
 			
 			
-			<form class="form-horizontal" ng-if="paktas.titulas">
+			<form class="form-horizontal" ng-if="validateTitulas() && paktas.titulas">
 				<div class="form-group">
 					<label class="col-md-5 control-label">Atvykstu</label>
 					<div class="col-md-7">
@@ -116,16 +116,22 @@
 				</div>
 				
 				<div class="form-group">
-					<div>Aš, [titulas vardas], laisva valia ir visuomenei nepritariant sudarau šį paktą su tamsos princu ir savo kaulų čiulpais prisiekiu atvykti į apeigas.</div>
+					<div></div>
 					<div class="checkbox ad-submit-text">
 						<label>
-							<input type="checkbox">
-							Satan
+							<input type="checkbox" ng-disabled="!validatePoreikiai()" ng-model="paktas.submited">
+							Aš, {{paktas.vardas}}, laisva valia ir visuomenei nepritariant sudarau šį paktą su tamsos princu ir savo kaulų čiulpais prisiekiu atvykti į apeigas.
 						</label>
+						
 					</div>
+					<button class="btn btn-danger" ng-disabled="!paktas.submited" ng-click="registerAcademon()">Satan</button>
 				</div>
 				<pre>{{paktas | json}}</pre>
 			</form>
+		</div>
+		<div class="jumbotron" ng-show="registered">
+			<div class="alert alert-danger" ng-if="!error" role="alert">Aš, {{paktas.vardas}}, laisva valia ir visuomenei nepritariant sudariau šį paktą su tamsos princu ir savo kaulų čiulpais prisiekiau atvykti į apeigas.</div>
+			<div class="alert alert-danger" ng-if="error" role="alert">{{error}}</div>
 		</div>
 	</div>
 	
