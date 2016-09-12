@@ -14,8 +14,9 @@
 
     <link rel="stylesheet" href="bootstrap.black.css">
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
     <!-- endbower -->
-
+    
     <!-- SATAN FONTs -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 
@@ -48,7 +49,7 @@
                         <li ng-class="{active: $state.includes('okultas')}"><a ui-sref="okultas">Okultas</a></li>
                         <li ng-class="{active: $state.includes('sventove')}"><a ui-sref="sventove">Šventovė</a></li>
                         <li ng-class=""><a disabled="true">Apeigos</a></li>
-                        <li ng-class=""><a disabled="true">Paktas</a></li>
+                        <li ng-class="{active: $state.includes('paktas')}"><a ui-sref="paktas">Paktas</a></li>
                         <li ng-class=""><a disabled="true">Pateptieji</a></li>
                     </ul>
                 </div>
@@ -68,12 +69,14 @@
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <!-- endbower -->
 
 <script src="app.js"></script>
 <script src="akademonai/ad.okultas/okultas.js"></script>
 <script src="akademonai/ad.sventove/sventove.js"></script>
 <script src="akademonai/MenuController.js"></script>
+<script src="akademonai/ad.paktas/paktas.js"></script>
 
 </body>
 </html>
