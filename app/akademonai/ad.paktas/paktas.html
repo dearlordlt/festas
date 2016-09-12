@@ -123,14 +123,16 @@
 							Aš, {{paktas.vardas}}, laisva valia ir visuomenei nepritariant sudarau šį paktą su tamsos princu ir savo kaulų čiulpais prisiekiu atvykti į apeigas.
 						</label>
 						
+					</div><br/>
+					<div class="col-md-12 ad-submit-text">
+						<button class="btn btn-danger" ng-disabled="!paktas.submited" ng-click="registerAcademon()">Satan</button>
 					</div>
-					<button class="btn btn-danger" ng-disabled="!paktas.submited" ng-click="registerAcademon()">Satan</button>
+					
 				</div>
-				<pre>{{paktas | json}}</pre>
 			</form>
 		</div>
 		<div class="jumbotron" ng-show="registered">
-			<div class="alert alert-danger" ng-if="!error" role="alert">Aš, {{paktas.vardas}}, laisva valia ir visuomenei nepritariant sudariau šį paktą su tamsos princu ir savo kaulų čiulpais prisiekiau atvykti į apeigas.</div>
+			<div class="alert alert-danger" ng-if="!error" role="alert">Aš, <strong>{{paktas.vardas}}</strong>, laisva valia ir visuomenei nepritariant sudariau šį paktą su tamsos princu ir savo kaulų čiulpais prisiekiau atvykti į apeigas.</div>
 			<div class="alert alert-danger" ng-if="error" role="alert">{{error}}</div>
 		</div>
 	</div>
