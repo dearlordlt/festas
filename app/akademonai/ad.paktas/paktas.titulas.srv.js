@@ -47,6 +47,7 @@ angular.module('SatanApp.paktas')
                 if(placement === 1) {
                     title = name + ' ' + abominacija1Wafter[Math.floor(Math.random() * abominacija1Wafter.length)];
                 }
+                //Before name
                 if(placement === 0) {
                     title = abominacija2W1st[Math.floor(Math.random() * abominacija2W1st.length)] + ' ' 
                         + abominacija2W2nd[Math.floor(Math.random() * abominacija2W2nd.length)] + ' '
