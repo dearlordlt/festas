@@ -58,12 +58,13 @@
 				
 				<div class="form-group">
 					<label for="paktasTitulas" class="col-md-3 control-label">Titulas * </label>
-					<div class="col-md-6">
-						<input type="text" class="form-control" id="paktasTitulas" placeholder="Satan..." ng-model="paktas.titulas">
-					</div>
-					
-					<div class="col-md-3">
-						<button class="btn btn-danger" ng-click="gautiTitula()">Gauti Titulą</button>
+					<div class="col-md-9">
+						<div class="input-group">
+							<div class="form-control" id="paktasTitulas" ng-model="paktas.titulas"  style="height: 60px;">{{paktas.titulas}}</div>
+							<span class="input-group-btn">
+				        <button class="btn btn-danger" ng-click="gautiTitula()" type="button" style="height: 60px;">Gauti Titulą</button>
+				      </span>
+						</div><!-- /input-group -->
 					</div>
 				</div>
 			</form>

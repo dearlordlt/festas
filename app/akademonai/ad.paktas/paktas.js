@@ -17,7 +17,8 @@ angular.module('SatanApp.paktas', [])
 		};
 		
 		$scope.gautiTitula = function () {
-			$scope.paktas.titulas = 'asdasd';
+			
+			$scope.paktas.titulas = paktasVardaiFactory.getTitle('istvirkelis', 'Pranas');
 		};
 		
 		console.log(paktasVardaiFactory.getTitle('istvirkelis', 'Pranas'));
