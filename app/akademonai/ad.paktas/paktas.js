@@ -2,7 +2,7 @@
 
 angular.module('SatanApp.paktas', [])
 	
-	.controller('PaktasController', ['$scope', function($scope) {
+	.controller('PaktasController', ['$scope', 'paktasFactory', function($scope, paktasFactory) {
 		
 		$scope.paktas = {
 			lytis: 'abominacija'
