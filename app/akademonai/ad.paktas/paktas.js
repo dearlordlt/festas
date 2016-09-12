@@ -2,7 +2,7 @@
 
 angular.module('SatanApp.paktas', [])
 	
-	.controller('PaktasController', ['$scope', 'paktasFactory', function($scope, paktasFactory) {
+	.controller('PaktasController', ['$scope', 'paktasFactory', 'paktasVardaiFactory', function($scope, paktasFactory, paktasVardaiFactory) {
 		
 		$scope.paktas = {
 			vardas: '',
