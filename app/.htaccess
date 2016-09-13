@@ -1,13 +1,11 @@
-Options +FollowSymLinks
-IndexIgnore */*
-RewriteEngine on
+<ifModule mod_rewrite.c>
+    RewriteEngine on
 
-# if a directory or a file exists, use it directly
-RewriteCond %{REQUEST_FILENAME} -s [OR]
-RewriteCond %{REQUEST_FILENAME} -l [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteCond %{REQUEST_URI} !/api
+    # Don't rewrite files or directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
 
-# otherwise forward it to index.html 
-RewriteRule ^.*$ - [NC,L]
-RewriteRule index.html [NC,L]
+
+    RewriteRule ^ your root folder/index.html [L]
+</ifModule>
