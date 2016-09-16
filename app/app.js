@@ -24,7 +24,7 @@ angular.module('SatanApp', [
             url: '/',
             templateUrl: 'akademonai/ad.okultas/okultas.html',
             controller: 'OkultasController'
-        };
+	};
 
         var sventoveState = {
             name: 'sventove',

@@ -7,7 +7,7 @@
     color: darkred;
 }
 
-.ad-tekstas {
+.satan-tekstas {
     padding-top: 10px;
     padding-bottom: 10px;
     color: #ffffff;
@@ -18,13 +18,13 @@ header {
     position: relative;
 }
 
-.ad-paragraph {
+.satan-paragraph {
     margin-top: 10px;
     margin-bottom: 10px;
     color: #cecece;
 }
 
-.ad-subtitle {
+.satan-subtitle {
     margin-top: 10px;
     margin-bottom: 10px;
     color: #909090;
@@ -41,11 +41,11 @@ a:hover {
     color: red;
 }
 
-.ad-submit-text {
+.satan-submit-text {
     text-align: center;
 }
 
-.ad-radio {
+.satan-radio {
     margin-top: 37px;
 }
 
