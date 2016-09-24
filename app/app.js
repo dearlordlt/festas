@@ -12,6 +12,7 @@ angular.module('SatanApp', [
     'SatanApp.paktas',
     'SatanApp.apeigos',
     'SatanApp.pateptieji',
+    'SatanApp.directives',
     'SatanApp.main'
     
 
