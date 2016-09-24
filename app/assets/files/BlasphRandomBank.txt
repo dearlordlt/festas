@@ -1,0 +1,36 @@
+﻿var veiksnys = ['naktinė mokesčių reforma', 'valdžia', 'rinkėjas', 'vidutinė motina', 'aukštasis mokslas', 'esama padėtis', 'satanizmas', 'tolerancija', 'politika', 'emigracija', 'imigracija', 'dauguma rodiklių']
+
+var asmuo = ['Landsbergis', 'prezidentė', 'Mockus', 'mergaitė', 'dr. Jonas', 'dr. Ignas', 'Knyslius', 'Knyslius']
+
+var titulas = ['tamsos Valdovas', 'profesorius', 'studentas', 'amžiną atilsį', 'doc.', 'prof.', 'projekto vadovas']
+
+var sexyVeiksnys = ['penis', 'vagina', '']
+
+var tarinys = ['augo', 'krito', 'išvažiavo', 'daugiau didėjo nei mažėjo', 'nepritarė šiuo klausimu', 'atsirado', 'išnyko', 'sužibėjo', 'nustebino', 'nenustebino', 'išlindo', 'kreipėsi į aukštesnes institucijas']
+
+var polIntro = ['Per paskutinę kadenciją ', 'Apklausos rodo, kad ', 'Slaptoje pažymoje skaičiau', 'Tebūnie ', 'Neslėpkime, kad ', 'Pasikartosiu: ', 'Mielieji, ', 'Mažiesiems draugams: ', 'Kas liečia homoseksualistus - ', 'Brangūs studentai ir jų mamytės, ', 'Vakar buvau vėžio skyriuje, galiu pasakyt - ']
+
+var polMid = ['Dabar reikalinga ', 'Tuo labiau, kai ir taip yra ', 'Šalia to - ', 'Pasižadu, mano šūkis bus ', 'Jau žinoma, kad tai buvo ', 'Tai ir yra ', 'Šitą nusikaltimą atliko ', 'Tarp kaltininkų tik ', 'Jei taip ir toliau, būtinai ateis ', 'Niekas kitas čia nekaltas, ', 'Laurus susirinko ']
+
+var hash ['']
+
+var coolIntro = ['Aš esu kambaryje, čia tamsu ', 'Leiskite nors šiek tiek apšilti man kojas, ', 'Nebenoriu miegoti viena, todėl ', 'Kas yra verslas, ', 'Kai kuriose savivaldybėse ', 'Procentas, tai čia šimtas, ']
+
+var coolMid = ['dabar jau tikrai ', ' jeigu jūs klaustumėte, 'bet jau į generalinius klausimus ', 'tai jau tikrai ']
+
+var coolOutro = ['eksportas pasiekė prieškrizinį lygį', ' mediena nugalėtų nelygioj kovoj', 'turiu trumpų ir šmaikščių atsakymų', 'niekados nepasakysiu', ' pereiname prie biokuro', 'telefonas išsikrauna', 'viskas, trūksta kantrybė']
+
+var zenklas = ['?', '.', '!', '...']
+
+var engIntro = ['Ai em šuje:', 'Die gesc', 'Leidyz end džentelmen', 'Disingiš gesc', "Ai vud laik tju emfazaiz zet', ]
+
+var engSomething = [' de komitment of ze Ripablik of Litiujiėnija iz ', ' ai em seitan ', ' de konstitušen of jūnesko ']
+
+var engFatality = ['a šied vju', 'šoude tu šoude', 'of ze hjuman kaind', 'bete, smate, mo kriėitiv end chohierint fjūčia togezia']
+
+var engOutro = ['. Fenk jū veri mač.', ' for it tiu bylong lasting.', ', pliz šier end laik.']
+
+
+
+
+
