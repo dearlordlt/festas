@@ -10,6 +10,8 @@ angular.module('SatanApp', [
     'SatanApp.okultas',
     'SatanApp.sventove',
     'SatanApp.paktas',
+    'SatanApp.apeigos',
+    'SatanApp.pateptieji',
     'SatanApp.main'
     
 
@@ -24,7 +26,7 @@ angular.module('SatanApp', [
             url: '/',
             templateUrl: 'akademonai/ad.okultas/okultas.html',
             controller: 'OkultasController'
-	};
+	    };
 
         var sventoveState = {
             name: 'sventove',
@@ -40,12 +42,28 @@ angular.module('SatanApp', [
             controller: 'PaktasController'
         };
 
+        var pateptiejiState = {
+            name: 'pateptieji',
+            url: '/pateptieji/',
+            templateUrl: 'akademonai/ad.pateptieji/pateptieji.html',
+            controller: 'PateptiejiController'
+        };
+
+        var apeigosState = {
+            name: 'apeigos',
+            url: '/apeigos/',
+            templateUrl: 'akademonai/ad.apeigos/apeigos.html',
+            controller: 'ApeigosController'
+        };
+
         /**
          * Sate Provider from Hell
          */
         $stateProvider.state(okultasState);
         $stateProvider.state(sventoveState);
         $stateProvider.state(paktasState);
+        $stateProvider.state(pateptiejiState);
+        $stateProvider.state(apeigosState);
 
         /*$urlRouterProvider.otherwise(function ($injector) {
             var $state = $injector.get('$state');
