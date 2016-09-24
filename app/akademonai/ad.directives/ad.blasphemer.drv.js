@@ -4,9 +4,10 @@ angular.module('SatanApp.directives', []).directive('blasphemer', function() {
         templateUrl: '/akademonai/ad.directives/ad.blasphemer.drv.html',
         controller: ['$scope', function($scope) {
             $scope.posts = [];
-            
-            $scope.basePathAvatars = 'assets/avatars';
-            $scope.basePathBots = 'assets/avatars/bots';
+            $scope.snukis = '';
+           
+            $scope.basePathAvatars = 'assets/avatars/';
+            $scope.basePathBots = 'assets/avatars/bots/';
             $scope.avatars = [
                     "Japanese_Demon_MOCK__37974_std.png",
                     "Wl2_portrait_dog.png",
@@ -84,6 +85,12 @@ angular.module('SatanApp.directives', []).directive('blasphemer', function() {
                     "yesferatu.png",
                     "zukauskas.png"
                 ];
+	
+	        $scope.keistiSnuki = function () {
+		        $scope.snukis = $scope.basePathAvatars + $scope.avatars [Math.round(Math.random()*$scope.avatars.length)];
+	        };
+	        $scope.keistiSnuki();
+	
         }]
     }
 });
