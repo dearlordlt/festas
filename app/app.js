@@ -12,6 +12,7 @@ angular.module('SatanApp', [
     'SatanApp.paktas',
     'SatanApp.apeigos',
     'SatanApp.pateptieji',
+    'SatanApp.blasphemer',
     'SatanApp.directives',
     'SatanApp.main'
     
@@ -57,6 +58,13 @@ angular.module('SatanApp', [
             controller: 'ApeigosController'
         };
 
+        var blasphemerState = {
+            name: 'blasphemer',
+            url: '/blasphemer/',
+            templateUrl: 'akademonai/ad.blasphemer/blasphemer.html',
+            controller: 'BlasphemerController'
+        };
+
         /**
          * Sate Provider from Hell
          */
@@ -65,6 +73,7 @@ angular.module('SatanApp', [
         $stateProvider.state(paktasState);
         $stateProvider.state(pateptiejiState);
         $stateProvider.state(apeigosState);
+        $stateProvider.state(blasphemerState);
 
         /*$urlRouterProvider.otherwise(function ($injector) {
             var $state = $injector.get('$state');
