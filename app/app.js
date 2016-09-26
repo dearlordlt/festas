@@ -5,6 +5,8 @@ angular.module('SatanApp', [
     //External satan stuff
     'ui.router',
     'ui.bootstrap',
+    'ui.grid',
+    'ui.grid.resizeColumns',
     
     //Internal satan stuff
     'SatanApp.okultas',
@@ -14,6 +16,7 @@ angular.module('SatanApp', [
     'SatanApp.pateptieji',
     'SatanApp.blasphemer',
     'SatanApp.directives',
+    'SatanApp.lentele',
     'SatanApp.main'
     
 
@@ -65,6 +68,13 @@ angular.module('SatanApp', [
             controller: 'BlasphemerController'
         };
 
+        var lenteleState = {
+            name: 'lentele',
+            url: '/lentele/',
+            templateUrl: 'akademonai/ad.lentele/lentele.html',
+            controller: 'LenteleController'
+        };
+
         /**
          * Sate Provider from Hell
          */
@@ -74,6 +84,7 @@ angular.module('SatanApp', [
         $stateProvider.state(pateptiejiState);
         $stateProvider.state(apeigosState);
         $stateProvider.state(blasphemerState);
+        $stateProvider.state(lenteleState);
 
         /*$urlRouterProvider.otherwise(function ($injector) {
             var $state = $injector.get('$state');

@@ -101,3 +101,8 @@ a:hover {
         color: red; 
     } 
 }
+
+.aka-demonai-grid {
+    color: black;
+    background-color: white !important;
+}
