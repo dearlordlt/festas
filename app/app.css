@@ -106,3 +106,9 @@ a:hover {
     color: black;
     background-color: white !important;
 }
+
+@media (max-width: 768px) {
+    .col-xs-12.text-left {
+        text-align: center;
+    }
+}

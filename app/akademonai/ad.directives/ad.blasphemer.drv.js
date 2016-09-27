@@ -1,11 +1,53 @@
-angular.module('SatanApp.directives', []).directive('blasphemer', function() {
+angular.module('SatanApp.directives').directive('blasphemer', function() {
     return {
         scope: {},
         templateUrl: '/akademonai/ad.directives/ad.blasphemer.drv.html',
-        controller: ['$scope', function($scope) {
+        controller: ['$scope', 'blasphemerSrv', function($scope, blasphemerSrv) {
             $scope.posts = [];
-            $scope.snukis = '';
-           
+	        $scope.form = {};
+	        $scope.error = null;
+	        $scope.limit = 5;
+	        
+	        $scope.more = function () {
+		        $scope.limit += 5;
+		        getBlasphemes();
+	        };
+	        
+	        var getBlasphemes = function () {
+		        blasphemerSrv.getBlasphemes($scope.limit, 0).success(function (data) {
+			        $scope.posts = data;
+			        $scope.error = null;
+		        }).error(function (error) {
+			        console.log(error);
+			        $scope.error = 'Could not contact satan!';
+		        });
+	        };
+	        getBlasphemes();
+	        
+	        $scope.blaspheme = function () {
+	        	if ($scope.form.message < 3 && $scope.form.username < 3) {
+	        		$scope.error = 'You don`t play with Satan!';
+			        return;
+		        } else {
+		        	$scope.error = null;
+		        }
+	        	
+		        blasphemerSrv.message = $scope.form.message;
+		        blasphemerSrv.username = $scope.form.username;
+	        	blasphemerSrv.post().success(function (data) {
+			        $scope.form.message = '';
+			        $scope.form.username = '';
+			        $scope.keistiSnuki();
+			        $scope.error = null;
+			        getBlasphemes();
+		        }).error(function (error) {
+			        console.log(error);
+			        $scope.error = 'Could not contact satan!';
+		        });
+		        
+	        };
+	        
+	        
             $scope.basePathAvatars = 'assets/avatars/';
             $scope.basePathBots = 'assets/avatars/bots/';
             $scope.avatars = [
@@ -87,7 +129,8 @@ angular.module('SatanApp.directives', []).directive('blasphemer', function() {
                 ];
 	
 	        $scope.keistiSnuki = function () {
-		        $scope.snukis = $scope.basePathAvatars + $scope.avatars [Math.round(Math.random()*$scope.avatars.length)];
+		        $scope.form.snukis = $scope.basePathAvatars + $scope.avatars [Math.round(Math.random()*($scope.avatars.length-1))];
+		        blasphemerSrv.avatar = $scope.form.snukis;
 	        };
 	        $scope.keistiSnuki();
 	

@@ -17,6 +17,7 @@ angular.module('SatanApp', [
     'SatanApp.blasphemer',
     'SatanApp.directives',
     'SatanApp.lentele',
+    'SatanApp.services',
     'SatanApp.main'
     
 

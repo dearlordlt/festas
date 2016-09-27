@@ -1,31 +1,67 @@
 <p>Blasphemer paskalos {{test}}</p>
 <div class="stan-postas"></div>
 <div class="stan-postas-forma">
+	<div class="alert-danger" ng-if="error">{{error}}</div>
 	<div class="row" style="padding-bottom: 15px;">
-		<div class="col-md-2" >
-			<img  style="min-width: 35px; min-height: 35px; width: 100%; height: 100%;" src="{{snukis}}">
+		<div class="col-md-3 col-lg-2 col-sm-3 col-xs-12">
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-left">
+				<img style="min-width: 120px; min-height: 120px; max-width: 120px; max-height: 120px; width: 100%; height: 100%; margin-bottom: 5px;" src="{{form.snukis}}">
+			</div>
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-left">
+				<button class="btn btn-danger" style="min-width: 120px; max-width: 120px; width: 100%; margin-bottom: 5px; border-radius: 0;" ng-click="keistiSnuki()">Keisk snukį</button>
+			</div>
 		</div>
-		<div class="col-md-10">
-			<textarea style="width: 100%; height: 100%;" rows="8"></textarea>
-			<button class="btn btn-danger" style="margin-top: 10px;" ng-click="keistiSnuki()">Keisk snukį</button>
-			<button class="btn btn-danger" style="margin-top: 10px;">Satan</button>
+		<div class="col-md-9 col-lg-10 col-sm-9 col-xs-12">
+			<div class="row" style="margin-bottom: 5px;">
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+					<input type="text" class="form-control" placeholder="Demono vardas" ng-model="form.username" style="border-radius: 0;">
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 5px;">
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+					<textarea style="width: 100%; height: 100%;" rows="8" placeholder="Šėtono žinia" ng-model="form.message"></textarea>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 5px;">
+				<div class="col-md-3 col-lg-3 col-sm-3 col-xs-12">
+					<button class="btn btn-danger"
+					        style="width: 100%; height: 100%; margin-bottom: 5px; border-radius: 0;"
+					        ng-click="blaspheme()">Satan</button>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="row" style="padding-bottom: 15px;">
-		<div class="col-md-2" >
-			<img  style="min-width: 35px; min-height: 35px; width: 100%; height: 100%;" src="/assets/avatars/bots/aparatas2.png">
+	
+	<div class="row" style="padding-bottom: 15px;" ng-repeat="post in posts">
+		<div class="col-md-3 col-lg-2 col-sm-3 col-xs-12">
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 text-left">
+				<img style="min-width: 120px; min-height: 120px; max-width: 120px; max-height: 120px; width: 100%; height: 100%; margin-bottom: 5px;" src="{{post.avatar}}">
+			</div>
 		</div>
-		<div class="col-md-10">
-			<p style="font-size: 16px;">Jie pasakė, kad šūdai yra myžalai ir jie klydo. Nes šūdai tikrai nėra myžalai. Jie pasakė, kad šūdai yra myžalai ir jie klydo. Nes šūdai tikrai nėra myžalai. Jie pasakė, kad šūdai yra myžalai ir jie klydo. Nes šūdai tikrai nėra myžalai. Kartojuos...</p>
+		<div class="col-md-9 col-lg-10 col-sm-9 col-xs-12">
+			<div class="row" style="margin-bottom: 5px;">
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+					<p style="font-size: 16px;">{{post.message}}</p>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 5px;">
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+					<span style="color: white;">{{post.username}}</span>
+				</div>
+			</div>
+			<div class="row" style="margin-bottom: 5px;">
+				<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" ng-if="post.created_at">
+					<span>Data: </span>{{post.created_at | date:'yyyy-MM-dd HH:mm:ss'}}
+				</div>
+			</div>
+			<hr>
 		</div>
 	</div>
-	<div class="row" style="padding-bottom: 15px;">
-		<div class="col-md-2" >
-			<img  style="min-width: 35px; min-height: 35px; width: 100%; height: 100%;" src="/assets/avatars/bots/aparatas2.png">
-		</div>
-		<div class="col-md-10">
-			<p style="font-size: 16px;">Jie pasakė, kad šūdai yra myžalai ir jie klydo. Nes šūdai tikrai nėra myžalai. Jie pasakė, kad šūdai yra myžalai ir jie klydo. Nes šūdai tikrai nėra myžalai. Jie pasakė, kad šūdai yra myžalai ir jie klydo. Nes šūdai tikrai nėra myžalai. Kartojuos...</p>
+	<div class="row" style="margin-bottom: 5px;">
+		<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="text-align: center;">
+			<button class="btn btn-danger"
+			        style="width: 100%; height: 100%; margin-bottom: 5px; border-radius: 0;"
+			        ng-click="more()">More Satan</button>
 		</div>
 	</div>
-
 </div>
