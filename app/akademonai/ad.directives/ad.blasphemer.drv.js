@@ -74,7 +74,6 @@ angular.module('SatanApp.directives').directive('blasphemer', function() {
                     "skeleton_PNG5552.png",
                     "star-256.png",
                     "succubus_pic.png",
-                    "sustausk-596x429.jpg",
                     "title119589078.png",
                     "title200181995.png",
                     "title297197317.png",
