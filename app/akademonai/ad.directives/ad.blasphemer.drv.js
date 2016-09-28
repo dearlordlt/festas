@@ -67,7 +67,7 @@ angular.module('SatanApp.directives').directive('blasphemer', function() {
                     "avatar_bf0c4e6ef8d0_128.png",
                     "avatar_d703f0fbf2c0_128.png",
                     "avatar_f69048063872_128.png",
-                    "bots",
+                    "bots", //?????????????????????????????????? nerodo image
                     "cat_skull.png",
                     "good_boy_____by_saffronpanther-d8d1lf4.png",
                     "grinic_kreign_mq.png",

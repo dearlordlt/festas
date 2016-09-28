@@ -6,6 +6,10 @@
     margin-bottom: 20px;
     color: darkred;
 }
+.jumbotron-right {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 .satan-tekstas {
     padding-top: 10px;
