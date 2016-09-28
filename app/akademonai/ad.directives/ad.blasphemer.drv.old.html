@@ -4,28 +4,22 @@
 	
 	<div style="display: flex; padding-bottom: 15px;" ng-repeat="post in posts">
 		<div style="display: flex; align-items: flex-start;padding-right: 10px;">
-			
-				<img style="width: 40px; height: 40px;margin-top: 4px;" src="{{post.avatar}}">
-			
+			<img style="width: 40px; height: 40px;margin-top: 4px;" src="{{post.avatar}}">
 		</div>
 		<div style="display: flex; align-items: center; flex: 1; width: 0;">
 			<div style="display: block; flex: 1; width: 100%;">
 				<div style="display: flex; align-items: flex-start;">
 					<div style="flex: 1; width: 0;">
-						
 						<p style="font-size: 14px; margin-bottom: 10px;">{{post.message}}</p>
-						<div >
-							<span style="color: white; font-size: 90%;">{{post.username}}</span>
+						<div>
+							<span style="color: white; font-size: 90%;">{{post.username[0] === "@" ? post.username : "@" + post.username}}</span>
 						</div>
-						
-						<div  ng-if="post.created_at">
+						<div ng-if="post.created_at">
 							<span style="font-size: 80%;">{{post.created_at | date:'yyyy-MM-dd HH:mm:ss'}}</span>
 						</div>
 					</div>
-					
-			
+				</div>
 			</div>
 		</div>
 	</div>
-
 </div>
