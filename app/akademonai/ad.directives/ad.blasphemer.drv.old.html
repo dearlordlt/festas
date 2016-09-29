@@ -9,13 +9,14 @@
 			<div style="display: block; flex: 1; width: 100%;">
 				<div style="display: flex; align-items: flex-start;">
 					<div style="flex: 1; width: 0;">
-						<p style="font-size: 14px; margin-bottom: 10px;">{{post.message}}</p>
+
 						<div>
 							<a ui-sref="blasphemer"><span style="color: white; font-size: 90%;">{{post.username[0] === "@" ? post.username : "@" + post.username}}</span></a>
 						</div>
 						<div ng-if="post.created_at">
 							<span style="font-size: 80%;">{{post.created_at | date:'yyyy-MM-dd HH:mm:ss'}}</span>
 						</div>
+						<p style="font-size: 14px; margin-bottom: 10px;">{{post.message}}</p>
 					</div>
 				</div>
 			</div>
