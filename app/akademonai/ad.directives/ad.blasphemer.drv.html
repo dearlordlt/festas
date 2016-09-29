@@ -3,13 +3,13 @@
 <div class="stan-postas-forma">
 	<div class="alert-danger" ng-if="error">{{error}}</div>
 	<div style="display: flex; padding-bottom: 15px;">
-		<div style="display: flex; align-items: flex-start;padding-right: 10px;">
-			<div>
-				<img style="width: 120px; height: 120px; margin-bottom: 10px; border-radius: 5px;" src="{{form.snukis}}"><br>
-				<button class="btn btn-danger" style="width: 120px; margin-bottom: 5px; border-radius: 2px;" ng-click="keistiSnuki()">Keisk snukį</button>
+		<div style="display: flex; align-items: flex-start;padding-right: 10px;min-width:40px;">
+			<div style="max-width:100%;">
+				<img style="max-width:100%; width: 120px; margin-bottom: 10px; border-radius: 5px;" src="{{form.snukis}}"><br>
+				<button class="btn btn-danger" style="max-width:100%; width: 120px; margin-bottom: 5px; border-radius: 2px;" ng-click="keistiSnuki()">Keisk snukį</button>
 			</div>
 		</div>
-		<div style="display: flex; align-items: center; flex: 1; width: 0;">
+		<div style="display: flex; align-items: center; flex: 1; width: 0;min-width:180px;">
 			<div style="display: block; flex: 1; width: 100%;">
 				<div style="display: flex; align-items: flex-start;">
 					<div style="flex: 1; width: 0;">
@@ -29,10 +29,12 @@
 	</div>
 
 	<div style="display: flex; padding-bottom: 15px;" ng-repeat="post in posts">
-		<div style="display: flex; align-items: flex-start;padding-right: 10px;">
-			<img style="width: 120px; height: 120px;margin-top: 4px; border-radius: 5px;" src="{{post.avatar}}">
+		<div style="display: flex; align-items: flex-start; padding-right: 10px; min-width:40px;">
+			<div style="box-flex: 1; flex: 1 1 auto; text-align: center;">
+				<img style="width: 120px; max-width:100%; margin-top: 4px; border-radius: 5px;" src="{{post.avatar}}">
+			</div>
 		</div>
-		<div style="display: flex; align-items: center; flex: 1; width: 0;">
+		<div style="display: flex; align-items: center; flex: 1; width: 0; min-width:180px;">
 			<div style="display: block; flex: 1; width: 100%;">
 				<div style="display: flex; align-items: flex-start;">
 					<div style="flex: 1; width: 0;">
