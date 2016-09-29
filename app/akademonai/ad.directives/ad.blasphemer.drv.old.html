@@ -11,7 +11,10 @@
 					<div style="flex: 1; width: 0;">
 
 						<div>
-							<a ui-sref="blasphemer"><span style="color: white; font-size: 90%;">{{post.username[0] === "@" ? post.username : "@" + post.username}}</span></a>
+							<a ui-sref="blasphemer"><span style="color: white; font-size: 90%;">
+								{{post.username[0]  === "@" ? post.username.split("/")[0] + " /"  : "@" + post.username.split("/")[0] + " /"}}
+								{{post.username[0]  === "@" ? post.username.split("/")[1]  : "@" + post.username.split("/")[1]}}
+							</span></a>
 						</div>
 						<div ng-if="post.created_at">
 							<span style="font-size: 80%;">{{post.created_at | date:'yyyy-MM-dd HH:mm:ss'}}</span>
