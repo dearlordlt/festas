@@ -94,7 +94,6 @@ angular.module('SatanApp.directives').directive('blasphemer', function() {
                     "title648354040.png",
                     "title685663863.png",
                     "title69751520.png",
-                    "title699567984.png",
                     "title711406535.png",
                     "title738642826.png",
                     "title801924374.png",
