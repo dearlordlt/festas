@@ -41,8 +41,8 @@
 
 						<div>
 							<span style="color: white; font-size: 90%;">
-								{{post.username[0]  === "@" ? post.username.split("/")[0] + " /"  : "@" + post.username.split("/")[0] + " /"}}
-								{{post.username[0]  === "@" ? post.username.split("/")[1]  : "@" + post.username.split("/")[1]}}
+								{{post.username[0]  === "@" ? post.username.split("/")[0] : "@" + post.username.split("/")[0]}}
+								{{post.username.split("/")[1] ? " / " + post.username.split("/")[1] : post.username.split("/")[1]}}
 
 							</span>
 						</div>
