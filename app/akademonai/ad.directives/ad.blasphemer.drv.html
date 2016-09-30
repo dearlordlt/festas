@@ -1,8 +1,10 @@
 <p>Blasphemer paskalos {{test}}</p>
 <div class="stan-postas"></div>
 <div class="stan-postas-forma">
+	<button class="btn btn-danger" style="max-width:100%; width: 100%; margin-bottom: 5px; border-radius: 2px;" ng-click="skleistiZinia()">Skleisk žinią</button>
 	<div class="alert-danger" ng-if="error">{{error}}</div>
-	<div style="display: flex; padding-bottom: 15px;">
+
+	<div ng-if="arSkleidziam" style="display: flex; padding-bottom: 15px;">
 		<div style="display: flex; align-items: flex-start;padding-right: 10px;min-width:40px;">
 			<div style="max-width:100%;">
 				<img style="max-width:100%; width: 120px; margin-bottom: 10px; border-radius: 5px;" src="{{form.snukis}}"><br>

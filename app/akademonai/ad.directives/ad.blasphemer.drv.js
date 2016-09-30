@@ -7,12 +7,18 @@ angular.module('SatanApp.directives').directive('blasphemer', function() {
 	        $scope.form = {};
 	        $scope.error = null;
 	        $scope.limit = 5;
-	        
+            $scope.arSkleidziam = false;
+
 	        $scope.more = function () {
 		        $scope.limit += 5;
 		        getBlasphemes();
 	        };
-	        
+
+            $scope.skleistiZinia = function () {
+                $scope.arSkleidziam = $scope.arSkleidziam ? false : true;
+            };
+
+
 	        var getBlasphemes = function () {
 		        blasphemerSrv.getBlasphemes($scope.limit, 0).success(function (data) {
 			        $scope.posts = data;
