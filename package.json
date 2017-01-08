@@ -7,6 +7,11 @@
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-html2js": "^0.3.6",
+    "grunt-ng-annotate": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.2.4",
     "gulp-webserver": "^0.9.1",
